@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uvert Marabe – Portfolio</title>
+    <link rel="icon" type="images/uvert.jpg" href="images/uvert.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ── Theme Toggle ── -->
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42
+        1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+
+    <div class="page-wrap">
+
+
+        <!-- ── Profile Header ── -->
+        <div class="profile-header">
+            <div class="avatar-wrap" id="avatarWrap">
+                <img class="avatar-img" data-theme-img="light" src="images/uvert-marabe-day.png" alt="Uvert Marabe">
+                <img class="avatar-img" data-theme-img="dark" src="images/uvert-marabe-night.png" alt="Uvert Marabe">
+            </div>
+            <div class="profile-info">
+                <div class="profile-top">
+                    <span class="profile-name">Uvert Marabe</span>
+                    <span class="verified">
+          <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+                    <span class="badge-champion">🏆 Web Developer</span>
+                </div>
+
+                <div class="profile-location">📍 Philippines</div>
+                <div class="profile-tagline">Web Developer \ Passionate About Building Web Applications</div>
+
+                <div class="profile-actions">
+                    <button type="button" class="btn btn-primary" onclick="openScheduleModal()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> Send Email
+                    </button>
+                    <a href="projects.html" class="btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg> View Projects
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Main Two-Column Grid ── -->
+        <div class="main-grid">
+
+            <!-- LEFT column -->
+            <div>
+
+                <!-- About -->
+                <div class="card">
+                    <div class="card-title">About</div>
+                    <div class="about-text">
+                        <p>I'm Uvert Marabe, a Web Developer student passionate about building web applications and solving problems through code. I work with HTML, CSS, JavaScript, Python, C, and C++ to create functional and user-friendly digital experiences.
+                        </p>
+                        <p>I enjoy learning new technologies and applying them to real projects. I have a solid foundation in both front-end and back-end development, including working with databases like XAMPP (MySQL), SSMS (SQL Server) and SQL lite.</p>
+                        <p>I'm driven by curiosity and a love for clean, efficient code. Whether it's building websites, writing scripts, or designing database structures, I always aim to deliver work that's practical and well-crafted.</p>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="card">
+                    <div class="card-title">
+                        Tech Stack
+                        <a href="techstack.html" class="view-all">View All ›</a>
+                    </div>
+
+                    <div class="stack-group">
+                        <div class="stack-label">Frontend</div>
+                        <div class="tag-list">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-group">
+                        <div class="stack-label">Programming Languages</div>
+                        <div class="tag-list">
+                            <span class="tag">Python</span>
+                            <span class="tag">C</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">VB.Net</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-group">
+                        <div class="stack-label">Databases</div>
+                        <div class="tag-list">
+                            <span class="tag">XAMPP (MySQL)</span>
+                            <span class="tag">SSMS (SQL Server Management Studio)</span>
+                            <span class="tag">SQL Lite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Projects -->
+                <div class="card">
+                    <div class="card-title">
+                        Projects
+                        <a href="projects.html" class="view-all">View All ›</a>
+                    </div>
+                    <div class="projects-grid">
+
+                        <div class="project-card">
+                            <div class="project-name">Using Bootstrap Commercial Template – Dunkin Donut</div>
+                            <div class="project-desc project-placeholder">A Bootstrap-based commercial landing page template, customized with a Dunkin' Donuts theme.</div>
+                            <span class="tag">Project</span>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-name">Using Bootstrap Commercial Template – Chrome Hearts</div>
+                            <div class="project-desc project-placeholder">A Bootstrap-based commercial landing page template, customized with a Chrome Hearts luxury fashion theme.</div>
+                            <span class="tag">Project</span>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-name">School Management Website – First Personal Project</div>
+                            <div class="project-desc project-placeholder">A Bootstrap school website project with a responsive design, school info, programs, and events.</div>
+                            <span class="tag">Project</span>
+
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-name">DESERT | Artisan Desserts</div>
+                            <div class="project-desc project-placeholder">A Bootstrap-based artisan dessert website featuring handcrafted sweets, signature treats, a responsive design, and an elegant user experience.</div>
+                            <span class="tag">Project</span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT column -->
+            <div>
+
+                <!-- Experience -->
+                <div class="card">
+                    <div class="card-title">Experience</div>
+                    <ul class="exp-list">
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">Full-Stack Developer</div>
+                                <div class="exp-company">Integrative Programming Thesis</div>
+                            </div>
+                            <div class="exp-year">2025</div>
+                        </li>
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">Web Developer</div>
+                                <div class="exp-company">Freelance</div>
+                            </div>
+                            <div class="exp-year">2025</div>
+                        </li>
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">Front-End Developer</div>
+                                <div class="exp-company">Capstone 1 Project</div>
+                            </div>
+                            <div class="exp-year">2025</div>
+                        </li>
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">System Analyst and UI/UX Designer</div>
+                                <div class="exp-company">Quantitative Method Thesis Project</div>
+                            </div>
+                            <div class="exp-year">2024</div>
+                        </li>
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">Arduino Based Projects</div>
+                                <div class="exp-company">Using Uno R3 and C++ Programming Language</div>
+                            </div>
+                            <div class="exp-year">2025</div>
+                        </li>
+                        <li class="exp-item">
+                            <div class="exp-dot active"></div>
+                            <div class="exp-body">
+                                <div class="exp-role">Data Analyst</div>
+                                <div class="exp-company">Work Immersion at Brgy Kaunlaran NBBS Navotas City</div>
+                            </div>
+                            <div class="exp-year">2022</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="card">
+                    <div class="card-title">
+                        Certifications
+                        <a href="#" class="view-all">View All ›</a>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Best in Work Immersion Awards</div>
+                        <div class="cert-issuer">at Brgy Kaunlaran NBBS Navotas City</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Finishing Work Immersion Awards</div>
+                        <div class="cert-issuer">at Brgy Kaunlaran NBBS Navotas City</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Ongoing On the Job Training (OJT)</div>
+                        <div class="cert-issuer">at McarsPH Assigned as a QA tester and Encoder</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Bottom Info Row ── -->
+        <div class="info-grid">
+
+            <!-- Social Links -->
+            <div>
+                <div class="info-section-title">Social Links</div>
+                <a href="https://www.facebook.com/profile.php?id=61568821230678" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243
+        0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </span> Facebook
+                </a>
+                <a href="https://github.com/uvertmarabe3" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.62.069-.608.069-.608
+        1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294
+        2.748-1.025 2.748-1.025.546 1.376.202 2.393.1 2.646.641.698 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.935.359.308.678.916.678 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </span> GitHub
+                </a>
+                <a href="https://www.instagram.com/uvrt077?igsh=MTQya3N4YWRxNWJsbg=" class=" social-link" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+        0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4。 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span> Instagram
+                </a>
+            </div>
+
+            <!-- Speaking -->
+            <div>
+                <div class="info-section-title">Speaking</div>
+                <p class="speaking-text">Available for collaboration on web development projects and tech discussions.</p>
+                <a href="#" class="get-touch" onclick="openScheduleModal(); return false;">Send Email ›</a>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <div class="info-section-title">Contact</div>
+                <div class="contact-item">
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">uvertmarabe3@email.com</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <a href="#" class="contact-link">
+                        <div>
+                            <div class="contact-label">No.</div>
+                            <div class="contact-value">09911327031</div>
+                        </div>
+                        <span>›</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Gallery ── -->
+        <div class="gallery-section">
+            <div class="gallery-title">Gallery</div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox( 'images/isa.png')">
+                    <img src="images/isa.png" alt="Gallery photo 1" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox( 'images/dalawa.jfif')">
+                    <img src="images/dalawa.jfif" alt="Gallery photo 2" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox( 'images/tatlo.png')">
+                    <img src="images/tatlo.png" alt="Gallery photo 3" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox( 'images/apat.jfif')">
+                    <img src="images/apat.jfif" alt="Gallery photo 4" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox( 'images/lima.jfif')">
+                    <img src="images/lima.jfif" alt="Gallery photo 5" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── Lightbox Viewer (zoomable + pannable) ── -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this)closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+        <div class="lightbox-toolbar">
+            <button class="lightbox-btn" onclick="lightboxZoomOut()" aria-label="Zoom out">−</button>
+            <button class="lightbox-btn" onclick="lightboxResetZoom()" aria-label="Reset zoom">⟲</button>
+            <button class="lightbox-btn" onclick="lightboxZoomIn()" aria-label="Zoom in">+</button>
+        </div>
+        <div class="lightbox-stage" id="lightboxStage">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery preview" draggable="false">
+        </div>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer>© 2026 Uvert Marabe. All rights reserved.</footer>
+
+    </div>
+    <!-- ── Get in Touch Form ── -->
+    <div class="modal-overlay" id="scheduleOverlay" onclick="if(event.target===this)closeScheduleModal()">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title">Send Email</div>
+                <button class="modal-close" onclick="closeScheduleModal()" aria-label="Close">✕</button>
+            </div>
+            <form id="scheduleForm" onsubmit="submitScheduleForm(event)">
+                <div class="modal-body">
+                    <label class="modal-label" for="scheduleName">Your Name</label>
+                    <input class="modal-input" type="text" id="scheduleName" required placeholder="Juan Dela Cruz">
+
+                    <label class="modal-label" for="scheduleEmail">Your Email</label>
+                    <input class="modal-input" type="email" id="scheduleEmail" required placeholder="you@example.com">
+
+                    <label class="modal-label" for="scheduleDate">Date</label>
+                    <input class="modal-input" type="date" id="scheduleDate" required>
+
+                    <label class="modal-label" for="scheduleMessage">Purpose</label>
+                    <textarea class="modal-input modal-textarea" id="scheduleMessage" rows="3" required placeholder="What would you like to talk about?"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" onclick="closeScheduleModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ── Chat Button ── -->
+    <button class="chat-fab" id="chatFab" onclick="toggleChat()">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+  Chat with Uvert
+</button>
+
+    <!-- ── Chat Widget ── -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar">
+                    <img class="chat-avatar-img" data-theme-img="light" src="images/uvert-marabe-day.png" alt="Uvert">
+                    <img class="chat-avatar-img" data-theme-img="dark" src="images/uvert-marabe-night.png" alt="Uvert">
+                </div>
+                <div>
+                    <div class="chat-header-name">Chat with Uvert</div>
+                    <div class="chat-header-status"><span class="status-dot"></span> Online</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">✕</button>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg-row">
+                <div class="chat-msg-avatar">
+                    <img class="chat-avatar-img" data-theme-img="light" src="images/uvert-marabe-day.png" alt="Uvert">
+                    <img class="chat-avatar-img" data-theme-img="dark" src="images/uvert-marabe-night.png" alt="Uvert">
+                </div>
+                <div>
+                    <div class="chat-sender-name">Uvert Marabe</div>
+                    <div class="chat-bubble chat-bubble-bot">Hi there! 👋 Thanks for visiting my website. Feel free to ask me anything about programming, web development, or my experiences in tech. Let me know how I can help!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+            <div class="chat-input-row">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Type a message..." maxlength="1000" oninput="updateCount()" onkeydown="if(event.key==='Enter' )sendMessage()" />
+                <button class="chat-send" onclick="sendMessage()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+            </div>
+            <div class="chat-hint">Ask me about programming, web dev, or tech! <span id="charCount">0</span>/1000</div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
