@@ -51,13 +51,6 @@
             color: var(--text);
         }
         
-        .divider {
-            width: 2px;
-            height: 28px;
-            background: var(--text);
-            border-radius: 2px;
-        }
-        
         .page-title {
             font-size: 26px;
             font-weight: 700;
@@ -201,6 +194,7 @@
                 <span class="tag">OpenAI</span>
                 <span class="tag">Claude</span>
                 <span class="tag">Cursor</span>
+                <span class="tag">OpenCode</span>
             </div>
         </div>
         <!-- Design Tools -->
@@ -214,17 +208,58 @@
             </div>
         </div>
     </div>
-    </div>
 
 
-    </div>
-
-    <button class="chat-fab" onclick="window.location.href='index.html'">
+    <button class="chat-fab" onclick="toggleChat()">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
   Chat with Uvert
 </button>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+
+    <!-- ── Chat Widget ── -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-left">
+                <div class="chat-avatar">
+                    <img class="chat-avatar-img" data-theme-img="light" src="images/uvert-marabe-day.png" alt="Uvert">
+                    <img class="chat-avatar-img" data-theme-img="dark" src="images/uvert-marabe-night.png" alt="Uvert">
+                </div>
+                <div>
+                    <div class="chat-header-name">Chat with Uvert</div>
+                    <div class="chat-header-status"><span class="status-dot"></span> Online</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleChat()">✕</button>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg-row">
+                <div class="chat-msg-avatar">
+                    <img class="chat-avatar-img" data-theme-img="light" src="images/uvert-marabe-day.png" alt="Uvert">
+                    <img class="chat-avatar-img" data-theme-img="dark" src="images/uvert-marabe-night.png" alt="Uvert">
+                </div>
+                <div>
+                    <div class="chat-sender-name">Uvert Marabe</div>
+                    <div class="chat-bubble chat-bubble-bot">Hi there! 👋 Thanks for visiting my website. Feel free to ask me anything about programming, web development, or my experiences in tech. Let me know how I can help!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+            <div class="chat-input-row">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Type a message..." maxlength="1000" oninput="updateCount()" onkeydown="if(event.key==='Enter' )sendMessage()" />
+                <button class="chat-send" onclick="sendMessage()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+            </div>
+            <div class="chat-hint">Ask me about programming, web dev, or tech! <span id="charCount">0</span>/1000</div>
+        </div>
+    </div>
+
 
 </body>
 
